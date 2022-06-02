@@ -35,6 +35,7 @@ namespace Tic_Tac_Toe
                 a.Text = "O";
             turn = !turn;
             a.Enabled = false;
+            turn_count++;
 
             WinnerCheck();
         }
@@ -65,20 +66,42 @@ namespace Tic_Tac_Toe
             else if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!C1.Enabled))
                 someone_wins = true;
 
-
             if (someone_wins)
             {
+                DisablingButtons();
+
                 String winner = "";
                 if (turn)
                     winner = "O";
                 else
                     winner = "X";
 
-                MessageBox.Show("Winner: " + winner, "Nice Game!");
+                MessageBox.Show("Winner: " + winner, "Nice Game<3!");
             }//end of someone_wins
+
+            else
+            {
+                if (turn_count == 9)
+                    MessageBox.Show("Draw!", "Play Again :>");
+
+            }//end of else
 
 
         }//end of winnerCheck
+
+        private void DisablingButtons()
+        {
+            try
+            {
+                foreach (Control disable in Controls)
+                {
+                    Button a = (Button)disable;
+                    a.Enabled = false;
+                }//foreach
+            }//end of try
+            catch { }
+
+        }//end for DisablingButtons
 
     }
 }
