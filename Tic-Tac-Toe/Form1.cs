@@ -43,13 +43,28 @@ namespace Tic_Tac_Toe
         {
             bool someone_wins = false;
             
-            //Horizontal Check
+            //Horizontal
             if ((A1.Text == A2.Text) && (A2.Text == A3.Text) && (!A1.Enabled) )
                 someone_wins = true;
             else if ((B1.Text == B2.Text) && (B2.Text == B3.Text) && (!B1.Enabled))
                 someone_wins = true;
             else if ((C1.Text == C2.Text) && (C2.Text == C3.Text) && (!C1.Enabled))
                 someone_wins = true;
+
+            //Vertical
+            else if ((A1.Text == B1.Text) && (B1.Text == C1.Text) && (!A1.Enabled))
+                someone_wins = true;
+            else if ((A2.Text == B2.Text) && (B2.Text == C2.Text) && (!B1.Enabled))
+                someone_wins = true;
+            else if ((A1.Text == B3.Text) && (B3.Text == C3.Text) && (!C1.Enabled))
+                someone_wins = true;
+
+            //Diagonal
+            else if ((A1.Text == B2.Text) && (B2.Text == C3.Text) && (!A1.Enabled))
+                someone_wins = true;
+            else if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!C1.Enabled))
+                someone_wins = true;
+
 
             if (someone_wins)
             {
