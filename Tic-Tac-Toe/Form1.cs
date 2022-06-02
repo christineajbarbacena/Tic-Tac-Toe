@@ -36,7 +36,34 @@ namespace Tic_Tac_Toe
             turn = !turn;
             a.Enabled = false;
 
-
+            WinnerCheck();
         }
+
+        private void WinnerCheck()
+        {
+            bool someone_wins = false;
+            
+            //Horizontal Check
+            if ((A1.Text == A2.Text) && (A2.Text == A3.Text) && (!A1.Enabled) )
+                someone_wins = true;
+            else if ((B1.Text == B2.Text) && (B2.Text == B3.Text) && (!B1.Enabled))
+                someone_wins = true;
+            else if ((C1.Text == C2.Text) && (C2.Text == C3.Text) && (!C1.Enabled))
+                someone_wins = true;
+
+            if (someone_wins)
+            {
+                String winner = "";
+                if (turn)
+                    winner = "O";
+                else
+                    winner = "X";
+
+                MessageBox.Show("Winner: " + winner, "Nice Game!");
+            }//end of someone_wins
+
+
+        }//end of winnerCheck
+
     }
 }
