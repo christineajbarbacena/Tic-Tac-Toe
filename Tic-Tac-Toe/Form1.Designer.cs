@@ -40,12 +40,16 @@
             this.C3 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutTicTacToeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.designerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playmusic = new System.Windows.Forms.PictureBox();
+            this.stopmusic = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playmusic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stopmusic)).BeginInit();
             this.SuspendLayout();
             // 
             // A1
@@ -167,6 +171,20 @@
             this.restartToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.restartToolStripMenuItem.Text = "New Game/Exit";
             // 
+            // newGameToolStripMenuItem
+            // 
+            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.newGameToolStripMenuItem.Text = "New Game";
+            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem1
+            // 
+            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(132, 22);
+            this.exitToolStripMenuItem1.Text = "Exit";
+            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -175,20 +193,6 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.exitToolStripMenuItem.Text = "Info";
-            // 
-            // newGameToolStripMenuItem
-            // 
-            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.newGameToolStripMenuItem.Text = "New Game";
-            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem1
-            // 
-            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem1.Text = "Exit";
-            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
             // aboutTicTacToeToolStripMenuItem
             // 
@@ -204,6 +208,30 @@
             this.designerToolStripMenuItem.Text = "Designer";
             this.designerToolStripMenuItem.Click += new System.EventHandler(this.designerToolStripMenuItem_Click);
             // 
+            // playmusic
+            // 
+            this.playmusic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("playmusic.BackgroundImage")));
+            this.playmusic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.playmusic.InitialImage = null;
+            this.playmusic.Location = new System.Drawing.Point(203, 269);
+            this.playmusic.Name = "playmusic";
+            this.playmusic.Size = new System.Drawing.Size(25, 19);
+            this.playmusic.TabIndex = 10;
+            this.playmusic.TabStop = false;
+            this.playmusic.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // stopmusic
+            // 
+            this.stopmusic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stopmusic.BackgroundImage")));
+            this.stopmusic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.stopmusic.InitialImage = null;
+            this.stopmusic.Location = new System.Drawing.Point(233, 269);
+            this.stopmusic.Name = "stopmusic";
+            this.stopmusic.Size = new System.Drawing.Size(25, 19);
+            this.stopmusic.TabIndex = 11;
+            this.stopmusic.TabStop = false;
+            this.stopmusic.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +240,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(279, 300);
+            this.Controls.Add(this.stopmusic);
+            this.Controls.Add(this.playmusic);
             this.Controls.Add(this.C3);
             this.Controls.Add(this.C2);
             this.Controls.Add(this.C1);
@@ -230,6 +260,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playmusic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stopmusic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,6 +285,8 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutTicTacToeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem designerToolStripMenuItem;
+        private System.Windows.Forms.PictureBox playmusic;
+        private System.Windows.Forms.PictureBox stopmusic;
     }
 }
 
