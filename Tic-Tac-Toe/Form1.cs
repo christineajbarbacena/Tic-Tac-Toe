@@ -131,7 +131,7 @@ namespace Tic_Tac_Toe
 
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }

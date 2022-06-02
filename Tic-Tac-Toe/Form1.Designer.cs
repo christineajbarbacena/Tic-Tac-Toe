@@ -211,7 +211,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(279, 269);
+            this.ClientSize = new System.Drawing.Size(279, 300);
             this.Controls.Add(this.C3);
             this.Controls.Add(this.C2);
             this.Controls.Add(this.C1);
