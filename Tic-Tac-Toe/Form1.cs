@@ -55,9 +55,9 @@ namespace Tic_Tac_Toe
             //Vertical
             else if ((A1.Text == B1.Text) && (B1.Text == C1.Text) && (!A1.Enabled))
                 someone_wins = true;
-            else if ((A2.Text == B2.Text) && (B2.Text == C2.Text) && (!B1.Enabled))
+            else if ((A2.Text == B2.Text) && (B2.Text == C2.Text) && (!A2.Enabled))
                 someone_wins = true;
-            else if ((A1.Text == B3.Text) && (B3.Text == C3.Text) && (!C1.Enabled))
+            else if ((A1.Text == B3.Text) && (B3.Text == C3.Text) && (!A3.Enabled))
                 someone_wins = true;
 
             //Diagonal
@@ -76,7 +76,7 @@ namespace Tic_Tac_Toe
                 else
                     winner = "X";
 
-                MessageBox.Show("Winner: " + winner, "Nice Game<3!");
+                MessageBox.Show("Winner: " + winner, "Nice Game <3!");
             }//end of someone_wins
 
             else
@@ -85,7 +85,6 @@ namespace Tic_Tac_Toe
                     MessageBox.Show("Draw!", "Play Again :>");
 
             }//end of else
-
 
         }//end of winnerCheck
 
@@ -100,8 +99,39 @@ namespace Tic_Tac_Toe
                 }//foreach
             }//end of try
             catch { }
-
         }//end for DisablingButtons
 
+        private void aboutTicTacToeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Also called noughts and crosses, or Xs and Os is a game for two players who take turns marking the spaces in a three-by-three grid with X or O. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner. -Wikipedia", "Tic Tac Toe");
+        }
+
+        private void designerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show ("By: Christine April Joy Barbacena");
+        }
+
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            turn = true;
+            turn_count = 0;
+            try
+            {
+                foreach (Control disable in Controls)
+                {
+                    Button a = (Button)disable;
+                    a.Enabled = true;
+                    a.Text = "";
+                }
+            }//end of try
+            catch { }
+
+
+        }
+
+        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

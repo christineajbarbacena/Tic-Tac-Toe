@@ -37,6 +37,14 @@
             this.C1 = new System.Windows.Forms.Button();
             this.C2 = new System.Windows.Forms.Button();
             this.C3 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutTicTacToeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.designerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // A1
@@ -129,6 +137,63 @@
             this.C3.UseVisualStyleBackColor = true;
             this.C3.Click += new System.EventHandler(this.button_click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.restartToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(279, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // restartToolStripMenuItem
+            // 
+            this.restartToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newGameToolStripMenuItem,
+            this.exitToolStripMenuItem1});
+            this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.restartToolStripMenuItem.Text = "New Game/Exit";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutTicTacToeToolStripMenuItem,
+            this.designerToolStripMenuItem});
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.exitToolStripMenuItem.Text = "Info";
+            // 
+            // newGameToolStripMenuItem
+            // 
+            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newGameToolStripMenuItem.Text = "New Game";
+            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem1
+            // 
+            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem1.Text = "Exit";
+            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
+            // 
+            // aboutTicTacToeToolStripMenuItem
+            // 
+            this.aboutTicTacToeToolStripMenuItem.Name = "aboutTicTacToeToolStripMenuItem";
+            this.aboutTicTacToeToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.aboutTicTacToeToolStripMenuItem.Text = "About Tic-Tac-Toe";
+            this.aboutTicTacToeToolStripMenuItem.Click += new System.EventHandler(this.aboutTicTacToeToolStripMenuItem_Click);
+            // 
+            // designerToolStripMenuItem
+            // 
+            this.designerToolStripMenuItem.Name = "designerToolStripMenuItem";
+            this.designerToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.designerToolStripMenuItem.Text = "Designer";
+            this.designerToolStripMenuItem.Click += new System.EventHandler(this.designerToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,12 +208,17 @@
             this.Controls.Add(this.A3);
             this.Controls.Add(this.A2);
             this.Controls.Add(this.A1);
+            this.Controls.Add(this.menuStrip1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic-Tac-Toe";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -163,6 +233,13 @@
         private System.Windows.Forms.Button C1;
         private System.Windows.Forms.Button C2;
         private System.Windows.Forms.Button C3;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem restartToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutTicTacToeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem designerToolStripMenuItem;
     }
 }
 
