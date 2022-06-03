@@ -170,6 +170,7 @@
             this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
             this.restartToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.restartToolStripMenuItem.Text = "New Game/Exit";
+            this.restartToolStripMenuItem.Click += new System.EventHandler(this.restartToolStripMenuItem_Click);
             // 
             // newGameToolStripMenuItem
             // 

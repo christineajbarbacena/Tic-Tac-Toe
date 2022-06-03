@@ -101,6 +101,7 @@ namespace Tic_Tac_Toe
                 }//foreach
             }//end of try
             catch { }
+
         }//end for DisablingButtons
 
         private void aboutTicTacToeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -117,6 +118,7 @@ namespace Tic_Tac_Toe
         {
             turn = true;
             turn_count = 0;
+
             try
             {
                 foreach (Control disable in Controls)
@@ -146,6 +148,11 @@ namespace Tic_Tac_Toe
         {
             //stop music
             player.Stop();
+        }
+
+        private void restartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
