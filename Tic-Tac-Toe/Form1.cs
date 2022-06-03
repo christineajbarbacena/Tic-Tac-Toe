@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Tic_Tac_Toe
 {
@@ -15,6 +16,7 @@ namespace Tic_Tac_Toe
         bool turn = true; //true means X turn; false means O turn
         int turn_count = 0;
 
+        SoundPlayer playsound = new SoundPlayer(@":\Users\barbacena\Documents\soundtrack\pvz.wav");
         
         public Form1()
         {
@@ -132,6 +134,16 @@ namespace Tic_Tac_Toe
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void play_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void stop_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
